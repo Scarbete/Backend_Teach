@@ -57,3 +57,77 @@
 # }
 #
 # print(len(obj))
+
+# try:
+#     age = int(input('Введите возраст: '))
+#     print(type(age))
+# except ValueError and TypeError:
+#     print('Ошибка типа данных')
+#
+#
+# try:
+#     age = int(input('Введите возраст: '))
+#     print(type(age))
+# except ValueError:
+#     print('Ошибка ValueError')
+# except TypeError:
+#     print('Ошибка TypeError')
+# finally:
+#     print('finally')
+
+# def int_input(placeholder: str) -> int:
+#     input_one = input(placeholder)
+#
+#     try:
+#         input_one = int(input_one)
+#     except ValueError:
+#         print('Не корректное значение')
+#         return 0
+#
+#     return input_one
+#
+#
+# while True:
+#     number = int_input(placeholder=f'Введите размерность списка: ')
+#     array_one = []
+#     element = 0
+#
+#     for elements in range(number):
+#         print()
+# from typing import List
+#
+#
+# arr = [10, 15, 20, 25, 30]
+#
+#
+# def plus_5(enter_arr: List[int]):
+#     """
+#     как работает......
+#     """
+#     new_arr = []
+#
+#     for number in enter_arr:
+#         new_arr.append(number + 5)
+#
+#     return new_arr
+#
+#
+# updated_arr = plus_5(enter_arr=arr)
+# print(updated_arr)
+# print(plus_5.__doc__)
+# print(input.__doc__)
+
+def int_input(placeholder: str) -> int:
+
+    while True:
+        input_one = input(placeholder)
+
+        try:
+            input_one = int(input_one)
+        except ValueError:
+            print('Не корректное значение...')
+
+        if isinstance(input_one, int):
+            return input_one
+
+num = int_input('Введите значение: ')
